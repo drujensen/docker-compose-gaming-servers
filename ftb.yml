@@ -1,0 +1,23 @@
+version: '2'
+services:
+  ftb:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+    volumes:
+      - /home/ubuntu/ftb:/data
+    environment:
+      TYPE: FTB
+      FTB_SERVER_MOD: FTBPresentsStoneblock2-1.16.1-1.12.2.zip
+      VERSION: 1.12.2
+      EULA: "TRUE"
+      OPS: LG_Ender
+      MOTD: "Cavern's End FTB"
+      MODE: survival
+      VIEW_DISTANCE: 15
+      ICON: server-icon.png
+      INIT_MEMORY: 1G
+      MAX_MEMORY: 4G
+    tty: true
+    stdin_open: true
+    restart: always

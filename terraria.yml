@@ -1,0 +1,11 @@
+version: '2'
+services:
+  terraria:
+    image: beardedio/terraria:vanilla-latest
+    ports:
+      - "7777:7777"
+    volumes:
+      - /home/ubuntu/terraria:/config
+    tty: true
+    stdin_open: true
+    restart: always

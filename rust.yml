@@ -1,0 +1,18 @@
+version: '2'
+services:
+  rust:
+    image: didstopia/rust-server
+    environment:
+      RUST_SERVER_IDENTITY: "sj10"
+      RUST_SERVER_NAME: "Caverns End"
+      RUST_SERVER_MAXPLAYERS: 50
+      RUST_SERVER_DESCRIPTION: "LG Ender's Server"
+      RUST_RCON_PASSWORD: "password"
+    ports:
+      - 28015:28015
+      - 28015:28015/udp
+      - 28016:28016
+      - 8080:8080
+    volumes:
+      - /home/ubuntu/rust:/steamcmd/rust
+
